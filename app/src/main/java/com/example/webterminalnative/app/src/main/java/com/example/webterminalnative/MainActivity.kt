@@ -4,18 +4,29 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.MaterialTheme
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.compose.material3.Surface
+import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
+import com.google.firebase.FirebaseApp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Initialize Firebase
+        FirebaseApp.initializeApp(this)
+
         setContent {
-            MaterialTheme {
-                val nav = rememberNavController()
-                val vm: AuthViewModel = viewModel()
-                AppNavHost(navController = nav, viewModel = vm)
-            }
+            WebTermNativeApp()
         }
+    }
+}
+
+@Composable
+fun WebTermNativeApp() {
+    val navController = rememberNavController()
+
+    Surface(color = MaterialTheme.colorScheme.background) {
+        AppNavGraph(navController = navController)
     }
 }
