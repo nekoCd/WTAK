@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.WebTerm.WTAK.app-mergeDebugResources-65:/values-lt/values-lt.xml",
+            "outputFile": "com.WTAK.WebTerm.app-mergeDebugResources-65:/values-lt/values-lt.xml",
             "map": [
                 {
                     "source": "/home/codespace/.gradle/caches/transforms-4/47183a338126923b7421ca9294b510cd/transformed/jetified-material3-release/res/values-lt/values-lt.xml",

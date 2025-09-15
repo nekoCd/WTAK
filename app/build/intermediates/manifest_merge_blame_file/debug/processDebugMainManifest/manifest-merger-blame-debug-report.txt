@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.WebTerm.WTAK"
+3    package="com.WTAK.WebTerm"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -20,12 +20,12 @@
 14
 15    <permission
 15-->[androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
-16        android:name="com.WebTerm.WTAK.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+16        android:name="com.WTAK.WebTerm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
 16-->[androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
 17        android:protectionLevel="signature" />
 17-->[androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
 18
-19    <uses-permission android:name="com.WebTerm.WTAK.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+19    <uses-permission android:name="com.WTAK.WebTerm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 19-->[androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
 19-->[androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
 20
@@ -43,8 +43,8 @@
 27-->/workspaces/WTAK/app/src/main/AndroidManifest.xml:6:9-42
 28        <activity
 28-->/workspaces/WTAK/app/src/main/AndroidManifest.xml:8:9-15:20
-29            android:name="com.WebTerm.WTAK.MainActivity"
-29-->/workspaces/WTAK/app/src/main/AndroidManifest.xml:9:13-41
+29            android:name="com.WTAK.WebTerm.MainActivity"
+29-->/workspaces/WTAK/app/src/main/AndroidManifest.xml:9:13-57
 30            android:exported="true" >
 30-->/workspaces/WTAK/app/src/main/AndroidManifest.xml:10:13-36
 31            <intent-filter>
@@ -233,7 +233,7 @@
 130-->[com.google.firebase:firebase-common:21.0.0] /home/codespace/.gradle/caches/transforms-4/d70707931002f0a64f8f08091822d547/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
 131            android:name="com.google.firebase.provider.FirebaseInitProvider"
 131-->[com.google.firebase:firebase-common:21.0.0] /home/codespace/.gradle/caches/transforms-4/d70707931002f0a64f8f08091822d547/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:24:13-77
-132            android:authorities="com.WebTerm.WTAK.firebaseinitprovider"
+132            android:authorities="com.WTAK.WebTerm.firebaseinitprovider"
 132-->[com.google.firebase:firebase-common:21.0.0] /home/codespace/.gradle/caches/transforms-4/d70707931002f0a64f8f08091822d547/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:25:13-72
 133            android:directBootAware="true"
 133-->[com.google.firebase:firebase-common:21.0.0] /home/codespace/.gradle/caches/transforms-4/d70707931002f0a64f8f08091822d547/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:26:13-43
@@ -245,7 +245,7 @@
 136-->[androidx.emoji2:emoji2:1.3.0] /home/codespace/.gradle/caches/transforms-4/595fbd673b6f34f88ce6a6a51548208a/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
 137            android:name="androidx.startup.InitializationProvider"
 137-->[androidx.emoji2:emoji2:1.3.0] /home/codespace/.gradle/caches/transforms-4/595fbd673b6f34f88ce6a6a51548208a/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
-138            android:authorities="com.WebTerm.WTAK.androidx-startup"
+138            android:authorities="com.WTAK.WebTerm.androidx-startup"
 138-->[androidx.emoji2:emoji2:1.3.0] /home/codespace/.gradle/caches/transforms-4/595fbd673b6f34f88ce6a6a51548208a/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
 139            android:exported="false" >
 139-->[androidx.emoji2:emoji2:1.3.0] /home/codespace/.gradle/caches/transforms-4/595fbd673b6f34f88ce6a6a51548208a/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37

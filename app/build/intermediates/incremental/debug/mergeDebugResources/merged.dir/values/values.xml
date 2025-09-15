@@ -1921,6 +1921,7 @@
     <string name="android.credentials.TYPE_PASSWORD_CREDENTIAL">Password</string>
     <string name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">Passkey</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
+    <string name="app_name">WTAK</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string description="A description of an accessibility action to collapse the bottom sheet [CHAR LIMIT=NONE]" name="bottomsheet_action_collapse">Collapse the bottom sheet</string>
@@ -1962,6 +1963,7 @@
     <string name="copy_toast_msg">Link copied to clipboard</string>
     <string name="default_error_message">"Invalid input"</string>
     <string name="default_popup_window_title" ns1:ignore="ExtraTranslation">"Pop-Up Window"</string>
+    <string name="default_web_client_id" translatable="false">1043265310244-hr4e40si56i2r3vc1nfqp7e0c7271t4i.apps.googleusercontent.com</string>
     <string name="dropdown_menu">"Dropdown menu"</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
@@ -1973,11 +1975,11 @@
     <string name="fallback_menu_item_copy_link">Copy link</string>
     <string name="fallback_menu_item_open_in_browser">Open in browser</string>
     <string name="fallback_menu_item_share_link">Share link</string>
-    <string name="gcm_defaultSenderId" translatable="false">471243677951</string>
-    <string name="google_api_key" translatable="false">AIzaSyBUO_BqY2e4FwETROs6DNl--4wlC9GsFsI</string>
-    <string name="google_app_id" translatable="false">1:471243677951:android:837ed560bb0607197a6cca</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBUO_BqY2e4FwETROs6DNl--4wlC9GsFsI</string>
-    <string name="google_storage_bucket" translatable="false">wtak-119eb.firebasestorage.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">1043265310244</string>
+    <string name="google_api_key" translatable="false">AIzaSyAixZaQrKLKUdjLf75uU4NhaRkF_k5grEw</string>
+    <string name="google_app_id" translatable="false">1:1043265310244:android:574ff77984c426abec12b1</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAixZaQrKLKUdjLf75uU4NhaRkF_k5grEw</string>
+    <string name="google_storage_bucket" translatable="false">webterminal-8489.firebasestorage.app</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="in_progress">In progress</string>
@@ -2156,7 +2158,7 @@
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
-    <string name="project_id" translatable="false">wtak-119eb</string>
+    <string name="project_id" translatable="false">webterminal-8489</string>
     <string name="range_end">"Range end"</string>
     <string name="range_start">"Range start"</string>
     <string name="search_menu_title">Search</string>

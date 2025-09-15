@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.WebTerm.WTAK.app-mergeDebugResources-65:/values-kk/values-kk.xml",
+            "outputFile": "com.WTAK.WebTerm.app-mergeDebugResources-65:/values-kk/values-kk.xml",
             "map": [
                 {
                     "source": "/home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/res/values-kk/values-kk.xml",

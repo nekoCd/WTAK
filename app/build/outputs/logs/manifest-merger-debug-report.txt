@@ -96,6 +96,7 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/codespace/.gradle/c
 MERGED from [androidx.print:print:1.0.0] /home/codespace/.gradle/caches/transforms-4/7254aad3be78a38078f865d80a86acf0/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/codespace/.gradle/caches/transforms-4/5cbbb469321cff7f7d7192167daf7457/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
 	package
+		ADDED from /workspaces/WTAK/app/src/main/AndroidManifest.xml:1:70-96
 		INJECTED from /workspaces/WTAK/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /workspaces/WTAK/app/src/main/AndroidManifest.xml
@@ -158,12 +159,12 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/codespace/.gradle/cac
 		ADDED from /workspaces/WTAK/app/src/main/AndroidManifest.xml:5:9-43
 	android:theme
 		ADDED from /workspaces/WTAK/app/src/main/AndroidManifest.xml:6:9-42
-activity#com.WebTerm.WTAK.MainActivity
+activity#com.WTAK.WebTerm.MainActivity
 ADDED from /workspaces/WTAK/app/src/main/AndroidManifest.xml:8:9-15:20
 	android:exported
 		ADDED from /workspaces/WTAK/app/src/main/AndroidManifest.xml:10:13-36
 	android:name
-		ADDED from /workspaces/WTAK/app/src/main/AndroidManifest.xml:9:13-41
+		ADDED from /workspaces/WTAK/app/src/main/AndroidManifest.xml:9:13-57
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /workspaces/WTAK/app/src/main/AndroidManifest.xml:11:13-14:29
 action#android.intent.action.MAIN
@@ -568,7 +569,7 @@ ADDED from [androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms
 		ADDED from [androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
-permission#com.WebTerm.WTAK.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.WTAK.WebTerm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
@@ -578,7 +579,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
-uses-permission#com.WebTerm.WTAK.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.WTAK.WebTerm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.1] /home/codespace/.gradle/caches/transforms-4/4250ee577a9fbafd18b9fb1088d07491/transformed/core-1.13.1/AndroidManifest.xml:26:22-94

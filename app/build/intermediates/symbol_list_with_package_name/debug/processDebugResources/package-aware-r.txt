@@ -1,4 +1,4 @@
-com.WebTerm.WTAK
+com.WTAK.WebTerm
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -3779,6 +3779,7 @@ string abc_toolbar_collapse_description
 string android_credentials_TYPE_PASSWORD_CREDENTIAL
 string androidx_credentials_TYPE_PUBLIC_KEY_CREDENTIAL
 string androidx_startup
+string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
@@ -3820,6 +3821,7 @@ string common_signin_button_text_long
 string copy_toast_msg
 string default_error_message
 string default_popup_window_title
+string default_web_client_id
 string dropdown_menu
 string error_a11y_label
 string error_icon_content_description

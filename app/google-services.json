@@ -1,26 +1,44 @@
 {
   "project_info": {
-    "project_number": "471243677951",
-    "project_id": "wtak-119eb",
-    "storage_bucket": "wtak-119eb.firebasestorage.app"
+    "project_number": "1043265310244",
+    "project_id": "webterminal-8489",
+    "storage_bucket": "webterminal-8489.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:471243677951:android:837ed560bb0607197a6cca",
+        "mobilesdk_app_id": "1:1043265310244:android:574ff77984c426abec12b1",
         "android_client_info": {
-          "package_name": "com.WebTerm.WTAK"
+          "package_name": "com.WTAK.WebTerm"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1043265310244-hiviajubjfet99if12vjktfpabpn4ehq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.WTAK.WebTerm",
+            "certificate_hash": "a3579cf751126ae6945f34d27b2e6c9eede36464"
+          }
+        },
+        {
+          "client_id": "1043265310244-hr4e40si56i2r3vc1nfqp7e0c7271t4i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyBUO_BqY2e4FwETROs6DNl--4wlC9GsFsI"
+          "current_key": "AIzaSyAixZaQrKLKUdjLf75uU4NhaRkF_k5grEw"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1043265310244-5ikndi3cas5r91cg6umn5nafme4rbvjb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

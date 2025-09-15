@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace "com.WebTerm.WTAK"
+    namespace "com.WTAK.WebTerm"
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.WebTerm.WTAK"
+        applicationId "com.WTAK.WebTerm"
         minSdk 24
         targetSdk 34
         versionCode 1
@@ -55,7 +55,5 @@ dependencies {
     implementation "com.google.android.gms:play-services-auth:21.2.0"
 
     implementation "androidx.core:core-ktx:1.13.1"
-
-    // ✅ Material Components for XML themes
     implementation "com.google.android.material:material:1.12.0"
 }

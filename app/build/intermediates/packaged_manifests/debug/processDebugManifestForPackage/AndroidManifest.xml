@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.WebTerm.WTAK"
+    package="com.WTAK.WebTerm"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -13,10 +13,10 @@
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <permission
-        android:name="com.WebTerm.WTAK.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.WTAK.WebTerm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.WebTerm.WTAK.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.WTAK.WebTerm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -26,7 +26,7 @@
         android:label="WTAK"
         android:theme="@style/Theme.WTAK" >
         <activity
-            android:name="com.WebTerm.WTAK.MainActivity"
+            android:name="com.WTAK.WebTerm.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -129,13 +129,13 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.WebTerm.WTAK.firebaseinitprovider"
+            android:authorities="com.WTAK.WebTerm.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.WebTerm.WTAK.androidx-startup"
+            android:authorities="com.WTAK.WebTerm.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

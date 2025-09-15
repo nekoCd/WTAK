@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="gcm_defaultSenderId" translatable="false">471243677951</string>
-    <string name="google_api_key" translatable="false">AIzaSyBUO_BqY2e4FwETROs6DNl--4wlC9GsFsI</string>
-    <string name="google_app_id" translatable="false">1:471243677951:android:837ed560bb0607197a6cca</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBUO_BqY2e4FwETROs6DNl--4wlC9GsFsI</string>
-    <string name="google_storage_bucket" translatable="false">wtak-119eb.firebasestorage.app</string>
-    <string name="project_id" translatable="false">wtak-119eb</string>
+    <string name="default_web_client_id" translatable="false">1043265310244-hr4e40si56i2r3vc1nfqp7e0c7271t4i.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1043265310244</string>
+    <string name="google_api_key" translatable="false">AIzaSyAixZaQrKLKUdjLf75uU4NhaRkF_k5grEw</string>
+    <string name="google_app_id" translatable="false">1:1043265310244:android:574ff77984c426abec12b1</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAixZaQrKLKUdjLf75uU4NhaRkF_k5grEw</string>
+    <string name="google_storage_bucket" translatable="false">webterminal-8489.firebasestorage.app</string>
+    <string name="project_id" translatable="false">webterminal-8489</string>
 </resources>
