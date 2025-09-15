@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "471243677951",
+    "project_id": "wtak-119eb",
+    "storage_bucket": "wtak-119eb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471243677951:android:837ed560bb0607197a6cca",
+        "android_client_info": {
+          "package_name": "com.WebTerm.WTAK"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUO_BqY2e4FwETROs6DNl--4wlC9GsFsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

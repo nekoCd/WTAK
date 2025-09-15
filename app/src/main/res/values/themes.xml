@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Custom app theme that uses Material3 Compose colors -->
+    <style name="Theme.WTAK" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- You can override colors here if needed -->
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+    </style>
+</resources>

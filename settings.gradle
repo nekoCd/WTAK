@@ -1,0 +1,2 @@
+rootProject.name = "WTAK"
+include(":app")
