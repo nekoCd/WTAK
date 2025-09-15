@@ -76,16 +76,23 @@ fun RegisterScreen(
 
         Button(
             onClick = {
-                auth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            navController.navigate("main") {
-                                popUpTo("register") { inclusive = true }
+                when {
+                    email.isBlank() -> errorMessage = "Email cannot be empty"
+                    password.isBlank() -> errorMessage = "Password cannot be empty"
+                    password.length < 6 -> errorMessage = "Password must be at least 6 characters"
+                    else -> {
+                        auth.createUserWithEmailAndPassword(email, password)
+                            .addOnCompleteListener { task ->
+                                if (task.isSuccessful) {
+                                    navController.navigate("main") {
+                                        popUpTo("register") { inclusive = true }
+                                    }
+                                } else {
+                                    errorMessage = task.exception?.localizedMessage ?: "Registration failed"
+                                }
                             }
-                        } else {
-                            errorMessage = task.exception?.localizedMessage ?: "Registration failed"
-                        }
                     }
+                }
             },
             modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)
         ) {

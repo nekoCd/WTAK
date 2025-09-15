@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">WTAK</string>
 
-    <!-- Firebase automatically injects this from google-services.json -->
-    <string name="default_web_client_id" translatable="false">@string/default_web_client_id</string>
+    <!-- Correct Web client ID from google-services.json -->
+    <string name="default_web_client_id" translatable="false">
+        1043265310244-hr4e40si56i2r3vc1nfqp7e0c7271t4i.apps.googleusercontent.com
+    </string>
 </resources>

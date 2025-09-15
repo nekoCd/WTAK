@@ -1,7 +1,6 @@
 package com.WTAK.WebTerm
 
 import android.app.Activity
-import android.content.Intent
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
@@ -15,7 +14,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
-import com.google.firebase.auth.FirebaseAuth
 
 @Composable
 fun LoginScreen(
@@ -82,12 +80,18 @@ fun LoginScreen(
 
         Button(
             onClick = {
-                authViewModel.login(
-                    email,
-                    password,
-                    onSuccess = onLoginSuccess,
-                    onFailure = { error -> errorMessage = error }
-                )
+                when {
+                    email.isBlank() -> errorMessage = "Email cannot be empty"
+                    password.isBlank() -> errorMessage = "Password cannot be empty"
+                    else -> {
+                        authViewModel.login(
+                            email,
+                            password,
+                            onSuccess = onLoginSuccess,
+                            onFailure = { error -> errorMessage = error }
+                        )
+                    }
+                }
             },
             modifier = Modifier.fillMaxWidth()
         ) {
