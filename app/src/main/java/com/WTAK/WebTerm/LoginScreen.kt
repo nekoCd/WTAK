@@ -1,116 +1,61 @@
 package com.WTAK.WebTerm
 
-import android.app.Activity
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
+import android.widget.Toast
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 @Composable
-fun LoginScreen(
-    onLoginSuccess: () -> Unit,
-    onNavigateRegister: () -> Unit,
-    authViewModel: AuthViewModel = viewModel()
-) {
+fun LoginScreen() {
+    val context = LocalContext.current
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
-    var errorMessage by remember { mutableStateOf<String?>(null) }
 
-    val context = LocalContext.current
-    val activity = context as Activity
+    Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
+        Text("Login", style = MaterialTheme.typography.headlineSmall)
 
-    // Build Google Sign-In client
-    val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-        .requestIdToken(context.getString(R.string.default_web_client_id)) // from google-services.json
-        .requestEmail()
-        .build()
-    val googleSignInClient: GoogleSignInClient = GoogleSignIn.getClient(context, gso)
+        Spacer(modifier = Modifier.height(16.dp))
 
-    val googleLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.StartActivityForResult()
-    ) { result ->
-        val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
-        try {
-            val account = task.getResult(ApiException::class.java)!!
-            val idToken = account.idToken!!
-            authViewModel.signInWithGoogle(
-                idToken,
-                onSuccess = { onLoginSuccess() },
-                onFailure = { error -> errorMessage = error }
-            )
-        } catch (e: ApiException) {
-            errorMessage = "Google sign-in failed: ${e.message}"
-        }
-    }
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(24.dp),
-        verticalArrangement = Arrangement.Center
-    ) {
-        TextField(
+        OutlinedTextField(
             value = email,
             onValueChange = { email = it },
             label = { Text("Email") },
             modifier = Modifier.fillMaxWidth()
         )
-        Spacer(modifier = Modifier.height(12.dp))
-        TextField(
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        OutlinedTextField(
             value = password,
             onValueChange = { password = it },
             label = { Text("Password") },
             modifier = Modifier.fillMaxWidth()
         )
-        Spacer(modifier = Modifier.height(12.dp))
 
-        if (errorMessage != null) {
-            Text(errorMessage!!, color = MaterialTheme.colorScheme.error)
-            Spacer(modifier = Modifier.height(12.dp))
-        }
+        Spacer(modifier = Modifier.height(16.dp))
 
-        Button(
-            onClick = {
-                when {
-                    email.isBlank() -> errorMessage = "Email cannot be empty"
-                    password.isBlank() -> errorMessage = "Password cannot be empty"
-                    else -> {
-                        authViewModel.login(
-                            email,
-                            password,
-                            onSuccess = onLoginSuccess,
-                            onFailure = { error -> errorMessage = error }
-                        )
-                    }
+        Button(onClick = {
+            val api = RetrofitClient.instance.create(AuthApi::class.java)
+            val request = LoginRequest(email, password)
+
+            api.login(request).enqueue(object : Callback<ApiResponse> {
+                override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
+                    val msg = response.body()?.message ?: "Login successful"
+                    Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
                 }
-            },
-            modifier = Modifier.fillMaxWidth()
-        ) {
+
+                override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
+                    Toast.makeText(context, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                }
+            })
+        }) {
             Text("Login")
-        }
-
-        Spacer(modifier = Modifier.height(12.dp))
-
-        Button(
-            onClick = { googleLauncher.launch(googleSignInClient.signInIntent) },
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Sign in with Google")
-        }
-
-        Spacer(modifier = Modifier.height(12.dp))
-
-        TextButton(onClick = onNavigateRegister, modifier = Modifier.fillMaxWidth()) {
-            Text("No account? Register here")
         }
     }
 }

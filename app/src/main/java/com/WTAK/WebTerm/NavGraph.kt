@@ -5,39 +5,21 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.google.firebase.auth.FirebaseAuth
 
 @Composable
-fun NavGraph(
-    navController: NavHostController,
-    modifier: Modifier = Modifier
-) {
-    val auth = FirebaseAuth.getInstance()
-
+fun NavGraph(navController: NavHostController, modifier: Modifier = Modifier) {
     NavHost(
         navController = navController,
-        startDestination = if (auth.currentUser != null) "home" else "login",
+        startDestination = "home",
         modifier = modifier
     ) {
-        composable("login") {
-            LoginScreen(
-                onLoginSuccess = { navController.navigate("home") },
-                onNavigateRegister = { navController.navigate("register") }
-            )
-        }
-        composable("register") {
-            RegisterScreen(navController = navController, auth = auth)
-        }
-        composable("home") {
-            MainScaffold(
-                navController = navController,   // ✅ FIXED: pass navController
-                onLogout = {
-                    auth.signOut()
-                    navController.navigate("login") {
-                        popUpTo("home") { inclusive = true }
-                    }
-                }
-            )
-        }
+        composable("home") { HomeScreen(navController) }
+        composable("becomeAdmin") { BecomeAdminScreen(navController) }
+        composable("admin") { AdminDashboard() }
+        composable("admin2fa") { Admin2FASetupScreen(secretKey = "SECRET") { code ->
+            // Handle confirm code
+        } onBack@{
+            navController.popBackStack()
+        } }
     }
 }

@@ -16,20 +16,7 @@ android {
         versionName "1.0"
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-
-    buildFeatures {
-        compose true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion "1.5.15"
-    }
+    ndkVersion "25.2.9519653"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
@@ -37,23 +24,56 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.15'
+    }
+
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+        resources {
+            excludes += ["/META-INF/{AL2.0,LGPL2.1}"]
+        }
     }
 }
 
-kotlin {
-    jvmToolchain(17)
-}
-
 dependencies {
-    implementation platform("androidx.compose:compose-bom:2024.08.00")
-    implementation "androidx.compose.ui:ui"
-    implementation "androidx.compose.material3:material3"
-    implementation "androidx.navigation:navigation-compose:2.8.2"
+    // Firebase (auth only)
+    implementation platform('com.google.firebase:firebase-bom:33.1.2')
+    implementation 'com.google.firebase:firebase-auth-ktx'
 
-    implementation "com.google.firebase:firebase-auth-ktx:23.0.0"
-    implementation "com.google.android.gms:play-services-auth:21.2.0"
+    // Google Sign-In
+    implementation 'com.google.android.gms:play-services-auth:21.2.0'
 
-    implementation "androidx.core:core-ktx:1.13.1"
-    implementation "com.google.android.material:material:1.12.0"
+    // Material
+    implementation 'com.google.android.material:material:1.12.0'
+
+    // Jetpack Compose
+    implementation 'androidx.activity:activity-compose:1.9.0'
+    implementation 'androidx.compose.ui:ui:1.6.8'
+    implementation 'androidx.compose.material3:material3:1.2.1'
+    implementation 'androidx.navigation:navigation-compose:2.8.0'
+    implementation 'androidx.compose.material:material-icons-extended:1.6.8'
+
+    // Termux AAR libs (from app/libs)
+    implementation(name: 'terminal-view-release', ext: 'aar')
+    implementation(name: 'terminal-emulator-release', ext: 'aar')
+
+    // Networking
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
 }

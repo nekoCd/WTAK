@@ -34,7 +34,11 @@ fun Admin2FASetupScreen(
 
                 Text("Scan this secret key with your authenticator app:")
                 Spacer(Modifier.height(8.dp))
-                Text(secretKey, style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.primary)
+                Text(
+                    secretKey,
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.primary
+                )
 
                 Spacer(Modifier.height(20.dp))
 
@@ -42,21 +46,23 @@ fun Admin2FASetupScreen(
                     value = code,
                     onValueChange = { code = it },
                     label = { Text("Enter code from app") },
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth(),
+                    singleLine = true
                 )
 
                 Spacer(Modifier.height(20.dp))
 
                 Button(
-                    onClick = { onConfirm(code) },
-                    modifier = Modifier.fillMaxWidth()
+                    onClick = { if (code.isNotBlank()) onConfirm(code) },
+                    modifier = Modifier.fillMaxWidth(),
+                    enabled = code.isNotBlank()
                 ) {
                     Text("Confirm Admin 2FA")
                 }
 
                 Spacer(Modifier.height(12.dp))
 
-                TextButton(onClick = { onBack() }) {
+                TextButton(onClick = onBack) {
                     Text("Back")
                 }
             }

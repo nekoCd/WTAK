@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">WTAK</string>
 
-    <!-- Correct Web client ID from google-services.json -->
+    <!-- Use the Android OAuth client ID (client_type:1) -->
     <string name="default_web_client_id" translatable="false">
-        1043265310244-hr4e40si56i2r3vc1nfqp7e0c7271t4i.apps.googleusercontent.com
+        1043265310244-hiviajubjfet99if12vjktfpabpn4ehq.apps.googleusercontent.com
     </string>
 </resources>

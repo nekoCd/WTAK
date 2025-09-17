@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.WTAK.WebTerm.app-mergeDebugResources-65:/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "com.WTAK.WebTerm.app-mergeDebugResources-67:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/codespace/.gradle/caches/transforms-4/8319269aba8aec3fd99517b92bd17aaf/transformed/appcompat-1.6.1/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "source": "/home/codespace/.gradle/caches/transforms-4/b05e5da3221f5ed2da2cb21d1976ad9f/transformed/appcompat-1.6.1/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
